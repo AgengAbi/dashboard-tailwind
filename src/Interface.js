@@ -1,10 +1,10 @@
 import React from 'react';
 import './index.css';
-class Home extends React.Component {
+class Interface extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			title: 'Home'
+			title: 'Interface'
 		}
 	}
 	render() {
@@ -17,4 +17,4 @@ class Home extends React.Component {
 	}
 }
 
-export default Home;
+export default Interface;
