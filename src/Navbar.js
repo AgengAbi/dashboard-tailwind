@@ -55,13 +55,11 @@ function Navbar() {
 						</div>
 					</div>
 				</nav>
-				<Router>
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/interface" component={Interface} />
 						<Route component={Notfound} />
 					</Switch>
-				</Router>
 		</div>
 	);
 }
