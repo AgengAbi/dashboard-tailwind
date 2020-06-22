@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import '../index.css';
-import logo from '../static/logo.svg';
-import avatar from '../static/images/avatar.png';
-import Home from '../Home';
-import Interface from '../Interface';
+import './index.css';
+import logo from './static/logo.svg';
+import avatar from './static/images/avatar.png';
+import Home from './pages/Home';
+import Interface from './pages/Interface';
+import Notfound from './pages/Notfound';
 
 function Navbar() {
 	return (
-		<Router>
 			<div class="antialiased h-screen">
 				<nav className="w-full flex justify-around bg-gray-800 h-16 items-center relative lg:justify-start lg:bg-white lg:pl-64 lg:border-b-2 lg:border-gray-800 z-10">
 					<div class="ham">
@@ -55,13 +55,14 @@ function Navbar() {
 						</div>
 					</div>
 				</nav>
-			</div>
-			{// <Home />}
-			<Switch>
-				<Route exact path="/" components={Home} />
-				<Route path="/interface" components={Interface} />
-			</Switch>
-		</Router>
+				<Router>
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route path="/interface" component={Interface} />
+						<Route component={Notfound} />
+					</Switch>
+				</Router>
+		</div>
 	);
 }
 
