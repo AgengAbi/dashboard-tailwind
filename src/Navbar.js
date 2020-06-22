@@ -6,6 +6,10 @@ import avatar from './static/images/avatar.png';
 import Home from './pages/Home';
 import Interface from './pages/Interface';
 import Notfound from './pages/Notfound';
+import Forms from './pages/Forms';
+import Extra from './pages/Extra';
+import Layout from './pages/Layout';
+import Docs from './pages/Docs';
 
 function Navbar() {
 	return (
@@ -58,6 +62,10 @@ function Navbar() {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/interface" component={Interface} />
+						<Route path="/forms" component={Forms} />
+						<Route path="/extra" component={Extra} />
+						<Route path="/layout" component={Layout} />
+						<Route path="/docs" component={Docs} />
 						<Route component={Notfound} />
 					</Switch>
 		</div>
